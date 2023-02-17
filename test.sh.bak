@@ -1,0 +1,7 @@
+plugsrc='v2ray-plugin'
+
+plug=$(echo -n "$plugsrc" | openssl enc -base64)
+plugdec=$(echo "$plug" | openssl enc -d -base64)
+
+echo "plug_encoded: $plug"
+echo "plug_decoded: $plugdec"
